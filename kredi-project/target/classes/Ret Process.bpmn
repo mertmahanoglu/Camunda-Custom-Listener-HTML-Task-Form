@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_0tfxv79" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.2.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+  <bpmn:process id="Ret_Process" name="Ret Process" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1" name="Başvuru Kabul Edilmedi">
+      <bpmn:outgoing>Flow_0w3m78t</bpmn:outgoing>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_1cav19o" messageRef="Message_00nyx1w" />
+    </bpmn:startEvent>
+    <bpmn:endEvent id="Event_1rf69xv">
+      <bpmn:incoming>Flow_01gr2ah</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:userTask id="Activity_1l9r64n" name="Ret sebebi bildir">
+      <bpmn:incoming>Flow_0w3m78t</bpmn:incoming>
+      <bpmn:outgoing>Flow_01gr2ah</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_0w3m78t" sourceRef="StartEvent_1" targetRef="Activity_1l9r64n" />
+    <bpmn:sequenceFlow id="Flow_01gr2ah" sourceRef="Activity_1l9r64n" targetRef="Event_1rf69xv" />
+  </bpmn:process>
+  <bpmn:message id="Message_00nyx1w" name="SubBasvuruRetMessage" />
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Ret_Process">
+      <bpmndi:BPMNEdge id="Flow_0w3m78t_di" bpmnElement="Flow_0w3m78t">
+        <di:waypoint x="208" y="120" />
+        <di:waypoint x="283" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_01gr2ah_di" bpmnElement="Flow_01gr2ah">
+        <di:waypoint x="383" y="120" />
+        <di:waypoint x="455" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Event_18sebq9_di" bpmnElement="StartEvent_1">
+        <dc:Bounds x="172" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="154" y="145" width="73" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1rf69xv_di" bpmnElement="Event_1rf69xv">
+        <dc:Bounds x="455" y="102" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_14at9f6_di" bpmnElement="Activity_1l9r64n">
+        <dc:Bounds x="283" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

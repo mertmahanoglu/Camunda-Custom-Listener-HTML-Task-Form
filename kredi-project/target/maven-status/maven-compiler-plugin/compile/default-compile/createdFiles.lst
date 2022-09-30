@@ -1,0 +1,9 @@
+com\example\camunda\RetProcess.class
+com\example\camunda\SendInfo.class
+com\example\camunda\CamundaExecutionListener.class
+com\example\kart\CardInfo.class
+com\example\kart\ErrorOccured.class
+com\example\camunda\ParseListenerPlugin.class
+com\example\camunda\Application.class
+com\example\kart\KartKontrol.class
+com\example\camunda\ParseListener.class

@@ -1,0 +1,55 @@
+
+  <head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  </head>
+
+    <section class="p-4 p-md-5" style="
+    background-image: url(https://mdbcdn.b-cdn.net/img/Photos/Others/background3.webp);
+  ">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-10 col-lg-8 col-xl-5">
+      <div class="card rounded-3">
+        <div class="card-body p-4">
+          <div class="text-center mb-4">
+            <h3>Kart Başvuru Formu</h3>
+          </div>
+          <form role="form" name="form" >
+      
+     
+           <div class="form-outline mb-4">
+       <label class="form-label" for="formControlLgXsd">T.C Kimlik No</label>
+              <input type="text" id="txtTC" class="form-control form-control-lg"
+                 cam-variable-name="TC" maxlength="11" cam-variable-type="String" required/>
+           
+            </div>
+
+
+            <div class="form-outline mb-4">
+   <label class="form-label" for="formControlLgXsd">Kartı Alacak Kişinin Adı/Soyadı</label>
+              <input type="text" id="txtName" class="form-control form-control-lg"
+                 cam-variable-name="name" cam-variable-type="String" required/>
+           
+            </div>
+
+            <div class="form-outline mb-4">
+        <label class="form-label" for="formControlLgXsd">Adres</label>
+              <input type="textarea" id="txtAdres" class="form-control form-control-lg"
+                cam-variable-name="adres" cam-variable-type="String" required/>
+      
+            </div>
+
+
+ <div class="form-outline mb-4">
+            <label class="form-label" for="formControlLgXsd">Email</label>
+              <input type="email" id="txtEmail" class="form-control form-control-lg"
+                 cam-variable-name="email" cam-variable-type="String" required/>
+  
+            </div>
+
+            <button class="btn btn-success btn-lg btn-block" type="submit">Başvur</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
