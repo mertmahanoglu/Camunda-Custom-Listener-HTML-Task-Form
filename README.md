@@ -1,12 +1,14 @@
 # Camunda-Global-Listener-HTML-Task-Form
 
-Spring Boot ve Maven kullanılarak oluşturulmuştur.
+It is developed with Spring Boot, Maven.
 
-Oluşturulan bu demo proje, Camunda BPMN Engine üzerinde bulunan tüm processler için bir Listener içerisinde istenilen kodun çalıştırılmasını sağlamaktadır. Aynı zamanda process içerisinde bir HTML dosyası üzerinden girilen değerler Camunda üzerinde işlenmektedir.
+This projects provides to run code with Listener for every process you have. At the same time, catches input values from HTML form in Listener to process values with any purpose.
 
-# Nasıl Çalışır?
+# How it works?
 
-Process fark etmeksizin Application.class üzerinden ayağa kaldırılan Camunda Engine içerisindeki tüm processler CamundaExecutionListener içerisindeki notify() metodunda bulunan işlemleri gerçekleştirecektir.
+
+
+Regardless of the process, all processes in Camunda Engine, which are raised through Application.class, will perform the operations in the notify() method in CamundaExecutionListener.
 
 ```Java
 public class CamundaExecutionListener implements ExecutionListener {
@@ -20,7 +22,7 @@ public class CamundaExecutionListener implements ExecutionListener {
 }
 ```
 
-ParseListenerPlugin içerisinde oluşturduğumuz custom listener, engine içerisine tanımlanır.
+The custom listener we created in the ParseListenerPlugin is defined in the engine with *processEngineConfiguration.setCustomPostBPMNParseListeners(preParseListeners);*
 
 ```Java
 @Component
